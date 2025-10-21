@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+
+}
+
+@layer base {
+
+}
+
+@layer components {
+    
+}
