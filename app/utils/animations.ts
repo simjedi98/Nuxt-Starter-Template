@@ -1,15 +1,24 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { timeline } from "#build/ui";
+import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin';
 
-gsap.registerPlugin(ScrollToPlugin);
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
+gsap.registerPlugin(MorphSVGPlugin);
 
 export class tweens {
     static deltax_std(selector: any, target: string, dt: number) {
         return gsap.to(selector.value, {
             dx: target,
+            duration: dt,
+            ease: "power2.out"
+        });
+    }
+
+    static deltay_std(selector: any, target: string, dt: number) {
+        return gsap.to(selector.value, {
+            dy: target,
             duration: dt,
             ease: "power2.out"
         });
@@ -26,6 +35,22 @@ export class tweens {
     static changeaccent_std(selector: any, target: string, dt: number) {
         return gsap.to(selector.value, {
             accent: target,
+            duration: dt,
+            ease: "power2.out"
+        });
+    }
+
+    static changescale_std(selector: any, target: number, dt: number) {
+        return gsap.to(selector.value, {
+            scale: target,
+            duration: dt,
+            ease: "power2.out"
+        });
+    }
+
+    static morphvector_std(selector: any, target: string, dt: number) {
+        return gsap.to(selector , {
+            morphSVG: target,
             duration: dt,
             ease: "power2.out"
         });

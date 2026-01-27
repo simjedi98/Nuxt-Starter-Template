@@ -1,0 +1,1 @@
+export const usePageLoadStatus = () => { return useState('pagestatus', () => ({isloading: true, begintransition: false, elapsedtime: 0, progress: 0}) ) };
