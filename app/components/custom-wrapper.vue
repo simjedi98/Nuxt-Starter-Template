@@ -24,7 +24,7 @@
 
     const dim = ref({x: 8, y: 8});
 
-    const rootClasses = computed(() => twJoin('w-full',props.tw_position) );
+    const rootClasses = computed(() => twJoin(props.tw_position) );
     const wrapperClasses = computed(() => twJoin('relative', props.tw_padding, props.tw_width, props.tw_background, cursor.value) );
 
     const hoveron = () => {
