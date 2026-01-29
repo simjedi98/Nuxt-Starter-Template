@@ -38,7 +38,7 @@
             <VectorRenderer v-if="props.crumb.icon" :path="props.crumb.icon" :width="18" :height="18" :paths="[{fill: props.color, stroke: props.color}]" />
             <TextBlock :as="'span'" :tw_classes="props.tw_text_classes" :label="props.crumb?.label"/>
         </div>
-        <BreadCrumb v-if="props.crumb.child" :crumb="props.crumb?.child" :cursor="props.cursor" />
+        <BreadCrumb v-if="props.crumb.child" :crumb="props.crumb?.child" :cursor="props.cursor" :color="props.color" :seperator="props.seperator" :tw_text_classes="props.tw_text_classes" />
     </div> 
 </template>
 

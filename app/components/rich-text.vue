@@ -12,6 +12,7 @@
         tw_position?: 'relative'|'absolute'|'fixed'|'static'|'sticky', //specify which utility class for controlling how block is positioned for your use case.
         tw_padding?: string, //spacify padding around block
         tw_direction?: 'flex-row'|'flex-col'|'flex-row-reverse'|'flex-col-reverse',
+        tw_alignment?: string,
         tw_gap?: string, // specify gap between elements if direction is flex
         tw_left?: string, 
         tw_right?: string,
@@ -27,6 +28,7 @@
         tw_font_family: '',
         tw_position: 'relative',
         tw_direction: 'flex-col',
+        tw_alignment: '',
         tw_gap: '',
         tw_padding: 'p-0',
         tw_left: '',
@@ -35,7 +37,7 @@
         tw_bottom: '',
     });
 
-    const rootClasses = computed(() => twJoin('flex', props.tw_position, props.tw_padding, props.tw_left, props.tw_right, props.tw_top, props.tw_bottom, props.tw_width, props.tw_align, props.tw_color, props.tw_font_weight, props.tw_font_size, props.tw_font_family, props.tw_direction, props.tw_gap))
+    const rootClasses = computed(() => twJoin('flex', props.tw_position, props.tw_padding, props.tw_left, props.tw_right, props.tw_top, props.tw_bottom, props.tw_width, props.tw_align, props.tw_alignment, props.tw_color, props.tw_font_weight, props.tw_font_size, props.tw_font_family, props.tw_direction, props.tw_gap))
 </script>
 
 <template>

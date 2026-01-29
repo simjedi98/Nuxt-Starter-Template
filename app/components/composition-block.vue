@@ -18,7 +18,7 @@
         tw_content_font_size?: string, // specify default font size rich text is rendered as
         tw_content_font_family?: string, // specify default font family rich text is rendered as
         tw_content_padding?: string // specify padding around rich text
-        tw_content_alignment?: 'text-left'|'text-center'|'text-right'|'text-justify'|'text-start'|'text-end', // text alignment direction
+        tw_content_alignment?: string, // text alignment direction
         heading_style_bindings?: {}
     }>(), {
         heading_value: 'Composition Block',
@@ -35,7 +35,7 @@
         tw_content_font_size: 'text-base leading-5.5',
         tw_content_font_family: '',
         tw_content_padding: 'p-0',
-        tw_content_alignment: 'text-left'
+        tw_content_alignment: ''
     })
 
     const rootClasses = 'flex';
@@ -52,7 +52,7 @@
         <div :class="mergedheadingWrapperClass" v-if="props.heading_value">
             <TextBlock :tw_classes="mergedheadingClasses" :label="props.heading_value" :style_bindings="props.heading_style_bindings" />
         </div>
-        <RichText :as="'div'" :tw_position="'relative'" :tw_color="props.tw_content_color" :tw_font_weight="props.tw_content_font_weight" :tw_font_size="props.tw_content_font_size" :tw_font_family="props.tw_content_font_family" :tw_padding="props.tw_content_padding" :tw_align="props.tw_content_alignment" :tw_width="props.tw_content_width" :tw_direction="props.tw_content_direction" :tw_gap="props.tw_content_gap">
+        <RichText :as="'div'" :tw_position="'relative'" :tw_color="props.tw_content_color" :tw_font_weight="props.tw_content_font_weight" :tw_font_size="props.tw_content_font_size" :tw_font_family="props.tw_content_font_family" :tw_padding="props.tw_content_padding" :tw_alignment="props.tw_content_alignment" :tw_width="props.tw_content_width" :tw_direction="props.tw_content_direction" :tw_gap="props.tw_content_gap">
             <slot />
         </RichText>
     </div>

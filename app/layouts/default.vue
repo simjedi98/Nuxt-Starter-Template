@@ -9,6 +9,7 @@
 
     const route = useRoute();
     const crumb = computed<Crumb>( () => helpers.generatebreadcrumbs(route.path) );
+    console.log(crumb.value);
     const cursor = ref('');
 
     onMounted(() => {
