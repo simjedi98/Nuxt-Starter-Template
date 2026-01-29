@@ -76,7 +76,7 @@
         <FilterToggle label="Completed" v-model="filters.completed" default_color="#FFFFFF" hover_color="#505665" active_color="#1B1D22" tw_padding="py-1 px-3" tw_text_classes="text-[10px] md:text-[10px] lg:text-[10px] font-normal leading-4" :style_bindings="{backgroundColor: filters.completed? '#00FFC3' : '#50566526'}" />
         <FilterToggle label="All" v-model="filters.all" default_color="#FFFFFF" hover_color="#505665" active_color="#1B1D22" tw_padding="py-1 px-3" tw_text_classes="text-[10px] md:text-[10px] lg:text-[10px] font-normal leading-4" :style_bindings="{backgroundColor: filters.all? '#00FFC3' : '#50566526'}" />
       </GroupBlock>
-      <NavigationTree :tree="tree" tw_tree_color="bg-[#505665]" tw_tree_top="left-97/100 top-0" tw_tree_bottom="bottom-2" tw_tree_width="w-px" tw_padding="px-4 pt-4 items-end" tw_gap="gap-2" :active="activeNode" @select="v => activeNode = v" >
+      <NavigationTree :tree="tree" tw_tree_color="bg-[#505665]" tw_tree_top="left-97/100 top-0" tw_tree_bottom="bottom-2.5" tw_tree_width="w-px" tw_padding="px-4 pt-4 items-end" tw_gap="gap-2" :active="activeNode" @select="v => activeNode = v" >
         <template #default="{ label, node }">
           <div class="relative flex w-fit px-2.5 items-center">
             <div class="absolute left-1/1">

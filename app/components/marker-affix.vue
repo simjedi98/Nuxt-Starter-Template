@@ -2,6 +2,8 @@
     import { twJoin } from 'tailwind-merge';
 
     type Vector = {
+        id?: string,
+        d?: string,
         fill?: string,
         stroke?: string,
         strokeWidth?: number,
@@ -9,6 +11,7 @@
     }
 
     const props = withDefaults(defineProps<{
+        default?: boolean,
         path?: string, // specify path to the marker intended for use, strongly recommend use of .svg to prevent unpredictable behavior
         tw_position?: 'relative'|'absolute'|'fixed'|'static'|'sticky', //specify which utility class for controlling how block is positioned for your use case.
         tw_padding?: string, // specify padding for your use case
@@ -23,6 +26,7 @@
         path_props?: Vector[],
         style_bindings?: {}
     }>(), {
+        default: false,
         tw_position: 'relative',
         tw_padding: 'p-0',
         tw_background: 'bg-transparent',
@@ -33,17 +37,15 @@
         marker_height: 32
     });
 
-    const markerClasses = 'relative flex items-center justify-center';
-
     const rootClasses = computed(() => twJoin('w-fit h-fit', props.tw_position, props.tw_padding, props.tw_background, props.tw_border_radius, props.tw_border_color, props.tw_border_width) );
-
+    const markerClasses = 'relative flex items-center justify-center';
 </script>
 
 <template>
     <div :class="rootClasses" :style="props.style_bindings">
         <div :class="markerClasses" >
-            <VectorRenderer v-if="props.path" :path="props.path" :width="props.marker_width" :height="props.marker_height" :view-box="props.viewBox" :fill="props.fill" :paths="props.path_props" />
-            <div v-if="!props.path" class="relative w-2.5 h-2.5 bg-black rounded-full"></div>
+            <VectorRenderer v-if="!props.default" :path="props.path" :width="props.marker_width" :height="props.marker_height" :view-box="props.viewBox" :fill="props.fill" :paths="props.path_props" />
+            <div v-if="props.default" class="relative w-2.5 h-2.5 bg-black rounded-full"></div>
         </div>
     </div>
 </template>

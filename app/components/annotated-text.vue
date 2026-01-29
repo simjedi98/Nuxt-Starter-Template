@@ -2,6 +2,8 @@
     import { twJoin } from 'tailwind-merge';
 
     type Vector = {
+        id?: string,
+        d?: string,
         fill?: string,
         stroke?: string,
         strokeWidth?: number,
@@ -9,6 +11,7 @@
     }
 
     const props = withDefaults(defineProps<{
+        default_marker?: boolean,
         text_value?: string, // text value to be rendered
         tw_text_classes?: string // tailwind utility for styling text-block
         text_as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div', // html tag text-block is rendered as
@@ -33,6 +36,7 @@
         text_style_bindings?: {},
         marker_style_bindings?: {}
     }>(),{
+        default_marker: false,
         text_value: 'Camel Toe',
         text_as: 'p',
         tw_text_classes: '',
@@ -57,11 +61,11 @@
 
 <template>
     <div :class="rootClasses">
-        <MarkerAffix v-if="!props.reverse" :path="props.marker_path" :marker_width="props.marker_width" :marker_height="props.marker_height" :tw_padding="props.tw_marker_padding" :tw_border_radius="props.tw_marker_border_radius" :tw_border_color="props.tw_marker_border_color" :tw_border_width="props.tw_marker_border_width" :tw_background="props.tw_marker_background" :view-box="props.marker_viewbox" :path_props="props.marker_path_props" :fill="props.marker_fill" :style_bindings="props.marker_style_bindings" />
+        <MarkerAffix v-if="!props.reverse" :default="props.default_marker" :path="props.marker_path" :marker_width="props.marker_width" :marker_height="props.marker_height" :tw_padding="props.tw_marker_padding" :tw_border_radius="props.tw_marker_border_radius" :tw_border_color="props.tw_marker_border_color" :tw_border_width="props.tw_marker_border_width" :tw_background="props.tw_marker_background" :view-box="props.marker_viewbox" :path_props="props.marker_path_props" :fill="props.marker_fill" :style_bindings="props.marker_style_bindings" />
         <div>
             <TextBlock :label="props.text_value" :as="props.text_as" :tw_classes="props.tw_text_classes" :style_bindings="props.text_style_bindings"/>
         </div>
-        <MarkerAffix v-if="props.reverse" :path="props.marker_path" :marker_width="props.marker_width" :marker_height="props.marker_height" :tw_padding="props.tw_marker_padding" :tw_border_radius="props.tw_marker_border_radius" :tw_border_color="props.tw_marker_border_color" :tw_border_width="props.tw_marker_border_width" :tw_background="props.tw_marker_background" :view-box="props.marker_viewbox" :path_props="props.marker_path_props" :fill="props.marker_fill" :style_bindings="props.marker_style_bindings" />
+        <MarkerAffix v-if="props.reverse" :default="props.default_marker" :path="props.marker_path" :marker_width="props.marker_width" :marker_height="props.marker_height" :tw_padding="props.tw_marker_padding" :tw_border_radius="props.tw_marker_border_radius" :tw_border_color="props.tw_marker_border_color" :tw_border_width="props.tw_marker_border_width" :tw_background="props.tw_marker_background" :view-box="props.marker_viewbox" :path_props="props.marker_path_props" :fill="props.marker_fill" :style_bindings="props.marker_style_bindings" />
     </div>
 </template>
 
