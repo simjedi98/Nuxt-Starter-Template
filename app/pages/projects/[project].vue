@@ -3,7 +3,7 @@
 </script>
 
 <template>
-   <GroupBlock tw_direction="flex-col" tw_gap="gap-4" tw_padding="px-41.25 py-33.75" tw_width="h-fit z-100">
+   <GroupBlock tw_direction="flex-col" tw_gap="gap-4" tw_padding="px-41.25 py-33.75">
       <GroupBlock tw_alignment="justify-between" >
          <SummaryBlock tw_direction="flex-row" tw_gap="gap-2" tw_width="w-fit"  heading_value="Project Name:" summary_value="Modifia.net" tw_header_classes="w-fit" tw_body_classes="w-fit" tw_heading_classes="text-xl md:text-xl lg:text-xl text-white font-normal leading-6.5" tw_summary_classes="text-xl md:text-xl lg:text-xl text-[#00FFC3] font-normal leading-6.5" />
          <CompositionBlock tw_direction="flex-row" tw_gap="gap-2 items-center" heading_value="status:" tw_header_classes="w-fit" tw_heading_classes="text-[10px] md:text-[10px] lg:text-[10px] text-white font-normal leading-4 uppercase" tw_width="w-fit" tw_content_width="w-fit" >
@@ -31,8 +31,10 @@
             <TextBlock :label="summary" tw_classes="text-xs md:text-xs lg:text-xs text-[#505665] leading-4.5 uppercase" />
             <AnnotatedText :tw_align="'items-baseline'" :marker_width="8" :marker_height="8" marker_viewbox="0 0 8 8" marker_fill="none" :marker_path_props="[{d: 'M 0 0 H 8 V 8 H 0 z', fill: '#00000000', stroke: '#FFFFFF', strokeWidth: 1, opacity: 1}]" :text_value="summary" tw_text_classes="text-xs md:text-xs lg:text-xs text-[#505665] leading-4.5 uppercase" />
          </AnnotatedCompositionBlock>
-         <AnnotatedCompositionBlock heading_value="Tech Stack" tw_gap="gap-4.5" :annotation_width="5" :annotation_height="22" annotation_viewBox="0 0 5 22" :annotation_path_props="[{d: 'M0 0 H 4.5 V 22 H 0 z', fill: '#00FFC3', stroke: '#00FFC3', strokeWidth: 0.25, opacity: 1}]" tw_annotation_padding="px-0 py-0" tw_body_classes="flex flex-col gap-2" tw_heading_classes="text-base md:text-base lg:text-base text-white leading-5.5 uppercase">
-
+         <AnnotatedCompositionBlock heading_value="Tech Stack" tw_gap="gap-5.5" :annotation_width="5" :annotation_height="22" annotation_viewBox="0 0 5 22" :annotation_path_props="[{d: 'M0 0 H 4.5 V 22 H 0 z', fill: '#00FFC3', stroke: '#00FFC3', strokeWidth: 0.25, opacity: 1}]" tw_annotation_padding="px-0 py-0" tw_body_classes="flex flex-col gap-2" tw_heading_classes="text-base md:text-base lg:text-base text-white leading-5.5 uppercase">
+            <CustomWrapper tw_padding="py-2.5 px-6">
+               <MetaHeadingSummaryBlock annotation_path="././app/assets/icons/home_sharp.svg" :annotation_width="24" :annotation_height="24" :annotation_path_props="[{fill: '#00FFC3', stroke: '#00FFC3'}]" heading_value="DevOps" metadata_value="CI/CD, Github Actions, Docker, Kubernetes" :summary_value="summary" tw_block_gap="gap-2" tw_gap="gap-0" tw_block_alignment="items-start" tw_heading_classes="text-sm md:text-sm lg:text-sm text-white font-normal leading-4.5 uppercase" tw_metadata_classes="text-[10px] md:text-[10px] lg:text-[10px] text-[#505665] font-normal leading-4" tw_summary_classes="text-[10px] md:text-[10px] lg:text-[10px] text-[#505665] font-normal leading-4" />
+            </CustomWrapper>
          </AnnotatedCompositionBlock>
       </GroupBlock>
    </GroupBlock>

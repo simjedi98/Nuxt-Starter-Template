@@ -5,7 +5,7 @@
 </script>
 
 <template>
-   <GroupBlock tw_direction="flex-col" tw_gap="gap-2.5" tw_padding="px-41.25 py-33.75" tw_alignment="justify-start" tw_width="h-full">
+   <GroupBlock tw_direction="flex-col" tw_gap="gap-2.5" tw_padding="px-41.25 py-33.75" tw_alignment="justify-start">
       <GroupBlock tw_gap="gap-0" tw_alignment="justify-start">
          <TagBlock :custom="true" tw_background="bg-[#50566526] backdrop-blur-[8px]" tw_padding="py-1 px-3" tw_border="border border-[#505665]" tw_width="w-fit" tw_radius="rounded-none">
           <AnnotatedText text_value="About Me" tw_align="items-center" marker_path="././app/assets/icons/home_sharp.svg" :marker_width="18" :marker_height="18" :marker_path_props="[{fill: '#00FFC3', stroke: '#00FFC3'}]" tw_text_classes="text-xs md:text-xs lg:text-xs text-white font-normal leading-4 uppercase" />
@@ -29,6 +29,9 @@
          <GroupBlock tw_gap="gap-3" tw_direction="flex-col" >
             <CustomWrapper tw_padding="py-2.5 px-6">
                <MetaHeadingSummaryBlock annotation_path="././app/assets/icons/home_sharp.svg" :annotation_width="24" :annotation_height="24" :annotation_path_props="[{fill: '#00FFC3', stroke: '#00FFC3'}]" heading_value="AWS" metadata_value="Amazon EC2, VPC, IAM, S3, Cloudfront, Route 52" :summary_value="summary" tw_block_gap="gap-2" tw_gap="gap-0" tw_block_alignment="items-start" tw_heading_classes="text-sm md:text-sm lg:text-sm text-white font-normal leading-4.5 uppercase" tw_metadata_classes="text-[10px] md:text-[10px] lg:text-[10px] text-[#505665] font-normal leading-4" tw_summary_classes="text-[10px] md:text-[10px] lg:text-[10px] text-[#505665] font-normal leading-4" />
+            </CustomWrapper>
+            <CustomWrapper tw_padding="py-2.5 px-6">
+               <MetaHeadingSummaryBlock annotation_path="././app/assets/icons/home_sharp.svg" :annotation_width="24" :annotation_height="24" :annotation_path_props="[{fill: '#00FFC3', stroke: '#00FFC3'}]" heading_value="DevOps" metadata_value="CI/CD, Github Actions, Docker, Kubernetes" :summary_value="summary" tw_block_gap="gap-2" tw_gap="gap-0" tw_block_alignment="items-start" tw_heading_classes="text-sm md:text-sm lg:text-sm text-white font-normal leading-4.5 uppercase" tw_metadata_classes="text-[10px] md:text-[10px] lg:text-[10px] text-[#505665] font-normal leading-4" tw_summary_classes="text-[10px] md:text-[10px] lg:text-[10px] text-[#505665] font-normal leading-4" />
             </CustomWrapper>
             <CustomWrapper tw_padding="py-2.5 px-6">
                <MetaHeadingSummaryBlock annotation_path="././app/assets/icons/home_sharp.svg" :annotation_width="24" :annotation_height="24" :annotation_path_props="[{fill: '#00FFC3', stroke: '#00FFC3'}]" heading_value="DevOps" metadata_value="CI/CD, Github Actions, Docker, Kubernetes" :summary_value="summary" tw_block_gap="gap-2" tw_gap="gap-0" tw_block_alignment="items-start" tw_heading_classes="text-sm md:text-sm lg:text-sm text-white font-normal leading-4.5 uppercase" tw_metadata_classes="text-[10px] md:text-[10px] lg:text-[10px] text-[#505665] font-normal leading-4" tw_summary_classes="text-[10px] md:text-[10px] lg:text-[10px] text-[#505665] font-normal leading-4" />

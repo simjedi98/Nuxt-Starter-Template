@@ -45,7 +45,7 @@
 
 <template>
   <!--  <LoadingBackground :progress="loadStatus.progress" :elapsedtime="loadStatus.elapsedtime" /> -->
-  <GroupBlock tw_alignment="justify-between items-end" tw_padding="py-38 px-40" tw_gap="gap-0 h-full z-15" >
+  <GroupBlock tw_alignment="justify-between items-end" tw_padding="py-38 px-40" tw_gap="gap-0 h-screen z-15" >
     <GroupBlock tw_direction="flex-col" tw_gap="gap-6" tw_alignment="items-start" tw_width="w-1/2" >
       <MetaHeadingCompositionBlock annotation_path="././app/assets/icons/home_sharp.svg" :annotation_width="24" :annotation_height="24" :annotation_path_props="[{fill: '#505665', stroke: '#505665'}]" heading_value="Project Name" metadata_value="Year: 2017" tw_heading_classes="text-base md:text-base lg:text-base text-white font-medium leading-5.5 uppercase" tw_metadata_classes="text-[10px] md:text-[10px] lg:text-[10px] text-[#505665] leading-4 uppercase" tw_summary_classes="pr-24 text-xs md:text-xs lg:text-xs text-[#505665] font-normal leading-4.5" tw_gap="gap-0" tw_block_gap="gap-2.5" >
         Lorem ipsum dolor sit amet consectetur. Purus nunc hendrerit sapien orci. Varius hendrerit dui nulla senectus nisi porta aliquam.
