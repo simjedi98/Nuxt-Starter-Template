@@ -1,8 +1,12 @@
 <script setup lang="ts">
    const summary = 'Lorem ipsum dolor sit amet consectetur. Dui sed lacus vitae ultricies platea nulla. Scelerisque ipsum tempor adipiscing nulla tellus. Dignissim eget aliquet cursus vestibulum vestibulum pharetra tellus sit.';
+   const page = ref<number>(1);
 </script>
 
 <template>
+   <div class="fixed right-0 w-[8%] top-0 bottom-0 flex items-center justify-center z-50">
+      <PaginationStd :count="6" :page="page" @change="v => page = v"  bar_color="bg-[#00FFC3]"/>
+   </div>
    <GroupBlock tw_direction="flex-col" tw_gap="gap-4" tw_padding="px-41.25 py-33.75">
       <GroupBlock tw_alignment="justify-between" >
          <SummaryBlock tw_direction="flex-row" tw_gap="gap-2" tw_width="w-fit"  heading_value="Project Name:" summary_value="Modifia.net" tw_header_classes="w-fit" tw_body_classes="w-fit" tw_heading_classes="text-xl md:text-xl lg:text-xl text-white font-normal leading-6.5" tw_summary_classes="text-xl md:text-xl lg:text-xl text-[#00FFC3] font-normal leading-6.5" />

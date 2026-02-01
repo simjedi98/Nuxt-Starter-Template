@@ -65,13 +65,12 @@
                 <path stroke="#77FFDF" stroke-width="0.25" fill="#77FFDF" d="M 0,7 h 12.5 v -0.5 h -6 v -6.5 h -0.5 v 6.5 h -6 z" />
             </svg>
         </div>
-    </div>
+    </div>  
     <Header :tw_position="'fixed'" tw_padding="top-0 left-0 py-8" tw_z="z-50">
         <LinkBlock url="/" :as="'nuxt'" label="Mayibongwe Craig" tw_font_size="text-sm leading-5 uppercase" default_color="#ffffff" active_color="#ffffff" hover_color="#808080" />
     </Header>
     <SideBar :tw_position="'fixed'" tw_gap="gap-4" tw_padding="left-0 top-0" tw_z="z-50">
         <AnnotatedLink :as="'nuxt'" url="/" :is-icon="true" :has-overlay="true" default_color="#505665" hover_color="#66FFDB" active_color="#FFFFFF" tw_text_classes="text-[#363A44] text-base md:text-base lg:text-base leading-5.5" label="home" annotation_path="././app/assets/icons/home_sharp.svg" :annotation_width="20" :annotation_height="20" />
-        <AnnotatedLink :as="'nuxt'" url="/projects" :is-icon="true" :has-overlay="true" default_color="#505665" hover_color="#66FFDB" active_color="#FFFFFF" tw_text_classes="text-[#363A44] text-base md:text-base lg:text-base leading-5.5" label="projects" annotation_path="././app/assets/icons/home_sharp.svg" :annotation_width="20" :annotation_height="20" />
         <AnnotatedLink :as="'nuxt'" url="/about" :is-icon="true" :has-overlay="true" default_color="#505665" hover_color="#66FFDB" active_color="#FFFFFF" tw_text_classes="text-[#363A44] text-base md:text-base lg:text-base leading-5.5" label="about" annotation_path="././app/assets/icons/home_sharp.svg" :annotation_width="20" :annotation_height="20" />
         <AnnotatedLink :as="'nuxt'" url="/contact" :is-icon="true" :has-overlay="true" default_color="#505665" hover_color="#66FFDB" active_color="#FFFFFF" tw_text_classes="text-[#363A44] text-base md:text-base lg:text-base leading-5.5" label="contact" annotation_path="././app/assets/icons/home_sharp.svg" :annotation_width="20" :annotation_height="20" />
     </SideBar>

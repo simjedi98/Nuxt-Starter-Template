@@ -14,6 +14,18 @@
     body {
         @apply bg-black
     }
+
+    html {
+        @apply scroll-smooth
+    }
+
+    html::-webkit-scrollbar, body::-webkit-scrollbar {
+        @apply w-0 lg:w-1.5 bg-[#505665]
+    }
+
+    html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+        @apply bg-[#00FFC3]
+    }
 }
 
 @layer components {
